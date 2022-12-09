@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="398.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.interfazusuario_wp.HelloController">
+    <children>
+        <AnchorPane prefHeight="86.0" prefWidth="600.0" style="-fx-background-color: #a60e07;">
+            <children>
+                <HBox prefHeight="90.0" prefWidth="600.0">
+                    <children>
+                  <Separator prefHeight="0.0" prefWidth="26.0" visible="false" />
+                        <ImageView fitHeight="88.0" fitWidth="89.0" onMouseClicked="#main" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/Iconos/LogoWPizza.png" />
+                            </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </ImageView>
+                  <Separator prefHeight="0.0" prefWidth="15.0" visible="false" />
+                        <Button mnemonicParsing="false" onMouseClicked="#menu" prefHeight="89.0" prefWidth="89.0" style="-fx-background-color: #a60e07;" text="MENÚ" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </Button>
+                  <Separator prefHeight="0.0" prefWidth="15.0" visible="false" />
+                        <Button mnemonicParsing="false" onMouseClicked="#order" prefHeight="88.0" prefWidth="160.0" style="-fx-background-color: #a60e07;" text="ORDENAR AHORA" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </Button>
+                        <Separator prefHeight="0.0" prefWidth="30.0" visible="false" />
+                        <ImageView fitHeight="59.0" fitWidth="61.0" onMouseClicked="#car" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/Iconos/carrito.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets top="15.0" />
+                            </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </ImageView>
+                  <Separator prefHeight="0.0" prefWidth="30.0" visible="false" />
+                  <ImageView fitHeight="47.0" fitWidth="70.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Iconos/exit.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="22.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+      <AnchorPane fx:id="logoPanel" layoutY="100.0" prefHeight="301.0" prefWidth="600.0" style="-fx-background-color: #c0c0c0;">
+         <children>
+            <Label layoutX="26.0" layoutY="14.0" prefHeight="40.0" prefWidth="193.0" text="WorldPizza Tizimín">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="43.0" prefHeight="134.0" prefWidth="210.0" text="WorldPizza es una empresa de pizzas fundada por Bryan Cetzal y Bennen Tun Ek en 2022, con el propósito de servir las pizzas más deliciosas de todo Tizimín en 40 minutos o menos, ¡o será gratis!" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Button layoutX="37.0" layoutY="177.0" mnemonicParsing="false" style="-fx-background-color: #a60e07;" text="Leer más" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Separator layoutX="272.0" layoutY="19.0" orientation="VERTICAL" prefHeight="253.0" prefWidth="0.0" />
+            <HBox layoutX="29.0" layoutY="213.0" prefHeight="48.0" prefWidth="159.0">
+               <children>
+                  <ImageView fitHeight="48.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Iconos/face.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Iconos/insta.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="48.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Iconos/twitter.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="300.0" layoutY="225.0" prefHeight="47.0" prefWidth="265.0" />
+            <VBox layoutX="300.0" layoutY="34.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="287.0" onMouseClicked="#order" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Banners/Ordena%20ahora.jpg" />
+                     </image>
+                  </ImageView>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <ImageView fitHeight="90.0" fitWidth="287.0" onMouseClicked="#menu" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Banners/Conoce%20nuestros%20menús.jpg" />
+                     </image>
+                  </ImageView>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <Button mnemonicParsing="false" onMouseClicked="#car" prefHeight="25.0" prefWidth="312.0" style="-fx-background-color: #a60e07;" text="¿Ya tienes un pedido? ¡Presiona aquí!" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+      <AnchorPane fx:id="menuPanel" layoutY="100.0" prefHeight="301.0" prefWidth="600.0" style="-fx-background-color: #c0c0c0;" visible="false">
+         <children>
+            <Label layoutX="27.0" layoutY="14.0" prefHeight="40.0" prefWidth="283.0" text="¡Navega por nuestros menús!">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <HBox layoutX="35.0" layoutY="71.0" prefHeight="80.0" prefWidth="307.0">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Pizza.jpg" />
+                     </image></ImageView>
+                  <Button mnemonicParsing="false" onMouseClicked="#menuPiz" prefHeight="79.0" prefWidth="289.0" style="-fx-background-color: #a60e07;" text="MENÚ DE PIZZAS" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <HBox layoutX="35.0" layoutY="172.0" prefHeight="80.0" prefWidth="307.0">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Refrescos.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onMouseClicked="#menuBeb" prefHeight="79.0" prefWidth="187.0" style="-fx-background-color: #a60e07;" text="MENÚ DE BEBIDAS" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <VBox layoutX="402.0" layoutY="34.0" prefHeight="216.0" prefWidth="139.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="34.0" prefWidth="151.0" text="RECOMENDADA:" textFill="#a60e07">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="139.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Pizzas/PMexicana.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="34.0" prefWidth="151.0" text="MEXICANA" textFill="#a60e07">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onMouseClicked="#orderPiMex" prefHeight="30.0" prefWidth="139.0" style="-fx-background-color: #a60e07;" text="¡Elegir ahora!" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="orderDomiPanel" layoutY="100.0" prefHeight="301.0" prefWidth="600.0" style="-fx-background-color: #c0c0c0;" visible="false">
+         <children>
+            <Label layoutX="29.0" layoutY="14.0" prefHeight="34.0" prefWidth="307.0" text="Datos de pedido:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="48.0" prefHeight="34.0" prefWidth="72.0" text="NOMBRE:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="140.0" prefHeight="34.0" prefWidth="307.0" text="Datos de domicilio (Tizimín):">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="329.0" layoutY="48.0" prefHeight="34.0" prefWidth="72.0" text="TELÉFONO:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Separator layoutX="46.0" layoutY="137.0" prefHeight="3.0" prefWidth="509.0">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Separator>
+            <TextField fx:id="nombreCli" layoutX="115.0" layoutY="52.0" prefHeight="29.0" prefWidth="168.0" promptText="Ingrese su nombre">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tel" layoutX="404.0" layoutY="52.0" prefHeight="26.0" prefWidth="151.0" promptText="XXX-XXX-XX-XX">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="40.0" layoutY="84.0" prefHeight="34.0" prefWidth="72.0" text="APELLIDO:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="apellido" layoutX="115.0" layoutY="87.0" prefHeight="26.0" prefWidth="168.0" promptText="Ingrese su apellido">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="40.0" layoutY="175.0" prefHeight="34.0" prefWidth="72.0" text="COLONIA:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="colonia" layoutX="115.0" layoutY="178.0" prefHeight="29.0" prefWidth="108.0" promptText="8 Calles">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="236.0" layoutY="176.0" prefHeight="34.0" prefWidth="48.0" text="CALLE:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="calle" layoutX="283.0" layoutY="178.0" prefHeight="29.0" prefWidth="48.0" promptText="XX">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="40.0" layoutY="211.0" prefHeight="34.0" prefWidth="108.0" text="NUM. EXTERIOR:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numExt" layoutX="175.0" layoutY="214.0" prefHeight="29.0" prefWidth="48.0" promptText="XXX">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="336.0" layoutY="176.0" prefHeight="34.0" prefWidth="59.0" text="CRUZ. 1:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="cruz1" layoutX="395.0" layoutY="178.0" prefHeight="29.0" prefWidth="48.0" promptText="XX">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="40.0" layoutY="245.0" prefHeight="34.0" prefWidth="96.0" text="REFERENCIAS:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="450.0" layoutY="176.0" prefHeight="34.0" prefWidth="59.0" text="CRUZ. 2:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="cruz2" layoutX="507.0" layoutY="178.0" prefHeight="29.0" prefWidth="48.0" promptText="XX">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Button layoutX="483.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#guardar" prefHeight="29.0" prefWidth="72.0" style="-fx-background-color: #a60e07;" text="Guardar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="referencias" layoutX="136.0" layoutY="248.0" prefHeight="29.0" prefWidth="307.0" promptText="Color de casa, cerca de un lugar, etc." />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="carPanel" layoutY="100.0" prefHeight="301.0" prefWidth="600.0" style="-fx-background-color: #c0c0c0;" visible="false">
+         <children>
+            <Button fx:id="editarDatos" layoutX="22.0" layoutY="262.0" mnemonicParsing="false" onMouseClicked="#editarDatosOrden" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #a60e07;" text="EDITAR DATOS" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <VBox layoutX="16.0" layoutY="5.0" prefHeight="172.0" prefWidth="569.0">
+               <children>
+                  <HBox fx:id="fila11" prefHeight="35.0" prefWidth="528.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="59.0" text="Orden">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="79.0" text="Pizza">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="79.0" text="Cantidad">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="32.0" prefWidth="55.0" text="Precio">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator prefHeight="3.0" prefWidth="19.0" visible="false" />
+                        <Label alignment="CENTER" prefHeight="32.0" prefWidth="86.0" text="Refresco">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="32.0" prefWidth="64.0" text="Cantidad">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="32.0" prefWidth="61.0" text="Precio">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="32.0" prefWidth="57.0" text="Total">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="35.0" prefWidth="583.0">
+                     <children>
+                        <Separator prefHeight="0.0" prefWidth="0.0" visible="false" />
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#orden1" prefHeight="25.0" prefWidth="28.0" style="-fx-background-color: #a60e07;" text="1" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Label fx:id="pizzaElegida1" alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="118.0" text="Vacío" />
+                        <ComboBox fx:id="cantidadPizza1" onAction="#actualizarPrecioPizza" prefHeight="14.0" prefWidth="50.0" promptText="1" style="-fx-background-color: #ffffff;">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Label fx:id="pizzaElegidaPrecio1" alignment="CENTER" prefHeight="32.0" prefWidth="80.0" text="\$0.00" />
+                        <Separator orientation="VERTICAL" prefHeight="32.0" prefWidth="0.0" />
+                        <Label fx:id="refrescoElegido1" alignment="CENTER" prefHeight="39.0" prefWidth="92.0" text="Vacío" />
+                        <ComboBox fx:id="cantidadRefresco1" onAction="#actualizarPrecioRefresco" prefHeight="14.0" prefWidth="50.0" promptText="1" style="-fx-background-color: #ffffff;">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Label fx:id="refrescoElegidoPrecio1" alignment="CENTER" prefHeight="32.0" prefWidth="60.0" text="\$0.00" />
+                        <Label fx:id="precioOrden1" alignment="CENTER" prefHeight="32.0" prefWidth="74.0" text="\$0.00" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox prefHeight="35.0" prefWidth="528.0">
+                     <children>
+                        <Separator prefHeight="0.0" prefWidth="0.0" visible="false" />
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#orden2" prefHeight="25.0" prefWidth="28.0" style="-fx-background-color: #a60e07;" text="2" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Label fx:id="pizzaElegida2" alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="118.0" text="Vacío" />
+                        <ComboBox fx:id="cantidadPizza2" disable="true" onAction="#actualizarPrecioPizza" prefHeight="14.0" prefWidth="50.0" promptText="1" style="-fx-background-color: #ffffff;">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Label fx:id="pizzaElegidaPrecio2" alignment="CENTER" prefHeight="32.0" prefWidth="80.0" text="\$0.00" />
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Label fx:id="refrescoElegido2" alignment="CENTER" prefHeight="39.0" prefWidth="92.0" text="Vacío" />
+                        <ComboBox fx:id="cantidadRefresco2" disable="true" onAction="#actualizarPrecioRefresco" prefHeight="14.0" prefWidth="50.0" promptText="1" style="-fx-background-color: #ffffff;">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Label fx:id="refrescoElegidoPrecio2" alignment="CENTER" prefHeight="32.0" prefWidth="60.0" text="\$0.00" />
+                        <Label fx:id="precioOrden2" alignment="CENTER" prefHeight="32.0" prefWidth="74.0" text="\$0.00" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox prefHeight="35.0" prefWidth="528.0">
+                     <children>
+                        <Separator prefHeight="0.0" prefWidth="0.0" visible="false" />
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#orden3" prefHeight="25.0" prefWidth="28.0" style="-fx-background-color: #a60e07;" text="3" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Label fx:id="pizzaElegida3" alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="118.0" text="Vacío" />
+                        <ComboBox fx:id="cantidadPizza3" disable="true" onAction="#actualizarPrecioPizza" prefHeight="14.0" prefWidth="50.0" promptText="1" style="-fx-background-color: #ffffff;">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Label fx:id="pizzaElegidaPrecio3" alignment="CENTER" prefHeight="32.0" prefWidth="80.0" text="\$0.00" />
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Label fx:id="refrescoElegido3" alignment="CENTER" prefHeight="39.0" prefWidth="92.0" text="Vacío" />
+                        <ComboBox fx:id="cantidadRefresco3" disable="true" onAction="#actualizarPrecioRefresco" prefHeight="14.0" prefWidth="50.0" promptText="1" style="-fx-background-color: #ffffff;">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Label fx:id="refrescoElegidoPrecio3" alignment="CENTER" prefHeight="32.0" prefWidth="60.0" text="\$0.00" />
+                        <Label fx:id="precioOrden3" alignment="CENTER" prefHeight="32.0" prefWidth="74.0" text="\$0.00" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox prefHeight="35.0" prefWidth="528.0">
+                     <children>
+                        <Separator prefHeight="0.0" prefWidth="0.0" visible="false" />
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#orden4" prefHeight="25.0" prefWidth="28.0" style="-fx-background-color: #a60e07;" text="4" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Label fx:id="pizzaElegida4" alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="118.0" text="Vacío" />
+                        <ComboBox fx:id="cantidadPizza4" disable="true" onAction="#actualizarPrecioPizza" prefHeight="14.0" prefWidth="50.0" promptText="1" style="-fx-background-color: #ffffff;">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Label fx:id="pizzaElegidaPrecio4" alignment="CENTER" prefHeight="32.0" prefWidth="80.0" text="\$0.00" />
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Label fx:id="refrescoElegido4" alignment="CENTER" prefHeight="39.0" prefWidth="92.0" text="Vacío" />
+                        <ComboBox fx:id="cantidadRefresco4" disable="true" onAction="#actualizarPrecioRefresco" prefHeight="14.0" prefWidth="50.0" promptText="1" style="-fx-background-color: #ffffff;">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Label fx:id="refrescoElegidoPrecio4" alignment="CENTER" prefHeight="32.0" prefWidth="60.0" text="\$0.00" />
+                        <Label fx:id="precioOrden4" alignment="CENTER" prefHeight="32.0" prefWidth="74.0" text="\$0.00" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+            <Label fx:id="domicilio" alignment="BOTTOM_LEFT" contentDisplay="CENTER" layoutX="22.0" layoutY="181.0" prefHeight="71.0" prefWidth="300.0" text="Sin datos de orden." visible="false">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="358.0" layoutY="226.0" prefHeight="24.0" prefWidth="108.0" text="PRECIO TOTAL:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="continuarPago" disable="true" layoutX="435.0" layoutY="262.0" mnemonicParsing="false" onMouseClicked="#verVentanaPago" prefHeight="25.0" prefWidth="139.0" style="-fx-background-color: #39711f;" text="PROCEDER A PAGAR" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="458.0" layoutY="181.0" mnemonicParsing="false" onMouseClicked="#menu" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: #a60e07;" text="EDITAR ORDEN" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="precioTotal" alignment="CENTER_RIGHT" layoutX="466.0" layoutY="226.0" prefHeight="24.0" prefWidth="105.0" text="\$0.00">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button layoutX="322.0" layoutY="181.0" mnemonicParsing="false" onMouseClicked="#borrarOrden" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #a60e07;" text="BORRAR ORDEN" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="tipodeOrden" layoutX="22.0" layoutY="262.0" mnemonicParsing="false" onMouseClicked="#order" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #a60e07;" text="TIPO DE ORDEN" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menuPizzasPanel" layoutY="100.0" onMouseClicked="#menuPiz" prefHeight="301.0" prefWidth="600.0" style="-fx-background-color: #c0c0c0;" visible="false">
+         <children>
+            <Label layoutX="27.0" layoutY="14.0" prefHeight="40.0" prefWidth="283.0" text="Menú de pizzas:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <VBox layoutX="38.0" layoutY="65.0" prefHeight="188.0" prefWidth="120.0">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Pizzas/PMexicana.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="34.0" prefWidth="151.0" text="MEXICANA" textFill="#a60e07">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onMouseClicked="#orderPiMex" prefHeight="30.0" prefWidth="139.0" style="-fx-background-color: #a60e07;" text="¡Elegir ahora!" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox layoutX="169.0" layoutY="65.0" prefHeight="188.0" prefWidth="120.0">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Pizzas/PMexicana.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="34.0" prefWidth="151.0" text="HAWAIANA" textFill="#a60e07">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onMouseClicked="#orderPiHaw" prefHeight="30.0" prefWidth="139.0" style="-fx-background-color: #a60e07;" text="¡Elegir ahora!" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox layoutX="300.0" layoutY="65.0" prefHeight="188.0" prefWidth="120.0">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Pizzas/PMexicana.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="34.0" prefWidth="151.0" text="PEPPERONI" textFill="#a60e07">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onMouseClicked="#orderPiPep" prefHeight="30.0" prefWidth="139.0" style="-fx-background-color: #a60e07;" text="¡Elegir ahora!" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox layoutX="432.0" layoutY="65.0" prefHeight="188.0" prefWidth="120.0">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Pizzas/PMexicana.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="34.0" prefWidth="151.0" text="PASTOR" textFill="#a60e07">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onMouseClicked="#orderPiPas" prefHeight="30.0" prefWidth="139.0" style="-fx-background-color: #a60e07;" text="¡Elegir ahora!" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menuBebidasPanel" layoutY="100.0" prefHeight="301.0" prefWidth="600.0" style="-fx-background-color: #c0c0c0;" visible="false">
+         <children>
+            <Label layoutX="27.0" layoutY="14.0" prefHeight="40.0" prefWidth="283.0" text="Menú de bebidas:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <VBox layoutX="79.0" layoutY="65.0" prefHeight="188.0" prefWidth="120.0">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Pizzas/PMexicana.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="34.0" prefWidth="151.0" text="COCA-COLA" textFill="#a60e07">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onMouseClicked="#orderRefCo" prefHeight="30.0" prefWidth="139.0" style="-fx-background-color: #a60e07;" text="¡Elegir ahora!" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox layoutX="240.0" layoutY="65.0" prefHeight="188.0" prefWidth="120.0">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Pizzas/PMexicana.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="34.0" prefWidth="151.0" text="PEPSI" textFill="#a60e07">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onMouseClicked="#orderRefPep" prefHeight="30.0" prefWidth="139.0" style="-fx-background-color: #a60e07;" text="¡Elegir ahora!" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox layoutX="398.0" layoutY="65.0" prefHeight="188.0" prefWidth="120.0">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Pizzas/PMexicana.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="34.0" prefWidth="151.0" text="MUNDET" textFill="#a60e07">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onMouseClicked="#orderRefMun" prefHeight="30.0" prefWidth="139.0" style="-fx-background-color: #a60e07;" text="¡Elegir ahora!" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="orderTiendaPanel" layoutY="100.0" prefHeight="301.0" prefWidth="600.0" style="-fx-background-color: #c0c0c0;" visible="false">
+         <children>
+            <Label layoutX="29.0" layoutY="14.0" prefHeight="34.0" prefWidth="307.0" text="Datos de pedido:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="48.0" prefHeight="34.0" prefWidth="72.0" text="NOMBRE:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="140.0" prefHeight="34.0" prefWidth="307.0" text="Datos de domicilio (Tizimín):">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="329.0" layoutY="48.0" prefHeight="34.0" prefWidth="72.0" text="TELÉFONO:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Separator layoutX="46.0" layoutY="137.0" prefHeight="3.0" prefWidth="509.0">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Separator>
+            <TextField fx:id="nombreCli2" layoutX="115.0" layoutY="52.0" prefHeight="29.0" prefWidth="168.0" promptText="Ingrese su nombre">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tel2" layoutX="404.0" layoutY="52.0" prefHeight="26.0" prefWidth="151.0" promptText="XXX-XXX-XX-XX">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="40.0" layoutY="84.0" prefHeight="34.0" prefWidth="72.0" text="APELLIDO:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="apellido2" layoutX="115.0" layoutY="87.0" prefHeight="26.0" prefWidth="168.0" promptText="Ingrese su apellido">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="40.0" layoutY="175.0" prefHeight="34.0" prefWidth="72.0" text="COLONIA:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField disable="true" layoutX="115.0" layoutY="178.0" prefHeight="29.0" prefWidth="108.0" promptText="8 Calles">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="236.0" layoutY="176.0" prefHeight="34.0" prefWidth="48.0" text="CALLE:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField disable="true" editable="false" layoutX="283.0" layoutY="178.0" prefHeight="29.0" prefWidth="48.0" promptText="XX">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="40.0" layoutY="211.0" prefHeight="34.0" prefWidth="108.0" text="NUM. EXTERIOR:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField disable="true" editable="false" layoutX="175.0" layoutY="214.0" prefHeight="29.0" prefWidth="48.0" promptText="XXX">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="336.0" layoutY="176.0" prefHeight="34.0" prefWidth="59.0" text="CRUZ. 1:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField disable="true" editable="false" layoutX="395.0" layoutY="178.0" prefHeight="29.0" prefWidth="48.0" promptText="XX">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="40.0" layoutY="245.0" prefHeight="34.0" prefWidth="96.0" text="REFERENCIAS:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="450.0" layoutY="176.0" prefHeight="34.0" prefWidth="59.0" text="CRUZ. 2:" textFill="#a60e07">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField disable="true" editable="false" layoutX="507.0" layoutY="178.0" prefHeight="29.0" prefWidth="48.0" promptText="XX">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Button layoutX="483.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#guardar2" prefHeight="29.0" prefWidth="72.0" style="-fx-background-color: #a60e07;" text="Guardar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <TextField disable="true" editable="false" layoutX="136.0" layoutY="248.0" prefHeight="29.0" prefWidth="307.0" promptText="Color de casa, cerca de un lugar, etc." />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ModoCompraPanel" layoutY="100.0" prefHeight="301.0" prefWidth="600.0" style="-fx-background-color: #c0c0c0;" visible="false">
+         <children>
+            <Label layoutX="29.0" layoutY="14.0" prefHeight="34.0" prefWidth="307.0" text="Modo de compra:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <HBox layoutX="73.0" layoutY="77.0" prefHeight="40.0" prefWidth="455.0">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#entregaDomi" prefHeight="40.0" prefWidth="193.0" style="-fx-background-color: #a60e07;" text="ENTREGA A DOMICILIO" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Separator prefHeight="40.0" prefWidth="34.0" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="36.0" text="O" />
+                  <Separator prefHeight="40.0" prefWidth="34.0" />
+                  <Button mnemonicParsing="false" onMouseClicked="#entregaTienda" prefHeight="40.0" prefWidth="193.0" style="-fx-background-color: #a60e07;" text="ENTREGAR EN TIENDA" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <ImageView fitHeight="59.0" fitWidth="59.0" layoutX="131.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/Iconos/moto.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="59.0" fitWidth="59.0" layoutX="406.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/Iconos/caminando.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="600.0" prefHeight="401.0" prefWidth="139.0" style="-fx-background-color: #8a0c06#7c0600;">
+         <children>
+            <Label alignment="BASELINE_LEFT" layoutX="16.0" layoutY="43.0" prefHeight="24.0" prefWidth="120.0" text="PIZZA:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="pizzaElegida" alignment="TOP_LEFT" layoutX="16.0" layoutY="67.0" prefHeight="24.0" prefWidth="120.0" text="Ninguna." textFill="WHITE" />
+            <Label alignment="BASELINE_LEFT" layoutX="16.0" layoutY="91.0" prefHeight="24.0" prefWidth="120.0" text="REFRESCO:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="refrescoElegido" alignment="TOP_LEFT" layoutX="16.0" layoutY="115.0" prefHeight="24.0" prefWidth="120.0" text="Ninguno." textFill="WHITE" />
+            <Label alignment="CENTER" layoutX="-2.0" layoutY="14.0" prefHeight="24.0" prefWidth="139.0" text="ORDEN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_LEFT" layoutX="16.0" layoutY="139.0" prefHeight="24.0" prefWidth="120.0" text="TIPO DE ORDEN:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="ordenElegido" alignment="TOP_LEFT" layoutX="16.0" layoutY="163.0" prefHeight="24.0" prefWidth="120.0" text="Ninguno." textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pagoPanel" layoutY="100.0" prefHeight="301.0" prefWidth="600.0" style="-fx-background-color: #c0c0c0;" visible="false">
+         <children>
+            <Button layoutX="483.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#guardarPago" prefHeight="29.0" prefWidth="72.0" style="-fx-background-color: #a60e07;" text="Pagar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <VBox layoutX="83.0" layoutY="114.0" prefHeight="134.0" prefWidth="345.0">
+               <children>
+                  <HBox prefHeight="47.0" prefWidth="337.0">
+                     <children>
+                        <Label prefHeight="47.0" prefWidth="158.0" text="NOMBRE COMO APARECE EN LA TARJETA:" textFill="#a60e07" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Separator prefHeight="0.0" prefWidth="0.0" visible="false" />
+                        <TextField prefHeight="29.0" prefWidth="168.0" promptText="Juan Jimenez">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="34.0" prefWidth="307.0">
+                     <children>
+                        <Label prefHeight="34.0" prefWidth="132.0" text="NÚMERO DE TARJETA:" textFill="#a60e07">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Separator prefHeight="3.0" prefWidth="37.0" visible="false" />
+                        <TextField prefHeight="26.0" prefWidth="168.0" promptText="XXXX--XXXX-XXXX-XXXX">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="110.0">
+                     <children>
+                        <Label prefHeight="34.0" prefWidth="139.0" text="FECHA DE EXPIRACIÓN:" textFill="#a60e07">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Separator prefHeight="0.0" prefWidth="31.0" visible="false" />
+                        <ComboBox prefHeight="25.0" prefWidth="66.0" promptText="Mes" style="-fx-background-color: #ffffff;" />
+                        <ComboBox prefHeight="25.0" prefWidth="66.0" promptText="Año" style="-fx-background-color: #ffffff;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="29.0" prefWidth="210.0">
+                     <children>
+                        <Label prefHeight="34.0" prefWidth="159.0" text="CÓDIGO DE CADUCIDAD:" textFill="#a60e07">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Separator prefHeight="0.0" prefWidth="2.0" visible="false" />
+                        <TextField prefHeight="29.0" prefWidth="66.0" promptText="XXX">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <RadioButton fx:id="PagoVentanilla" layoutX="40.0" layoutY="26.0" mnemonicParsing="false" text="Pago en ventanilla." />
+            <RadioButton fx:id="PagoLinea" layoutX="40.0" layoutY="66.0" mnemonicParsing="false" text="Pago en línea." />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
